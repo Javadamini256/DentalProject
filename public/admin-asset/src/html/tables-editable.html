@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ادمین تو - قالب مدیریتی واکنش گرا</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="یک قالب مدیریتی با امکانات فراوان برای ساخت سی آر ام، سیستم مدیریت محتوا و ..." name="description" />
+        <meta content="قائم امیدی" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html', {"title": "Editable Tables"})
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="mt-0 header-title">ویرایش درون خط</h4>
+                                        <p class="sub-header">ویرایش در همه ستون ها به جز ردیف</p>
+                                        <div class="table-responsive">
+                                            <table class="table table-centered mb-0" id="inline-editable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>نام</th>
+                                                        <th>موقعیت</th>
+                                                        <th>دفتر</th>
+                                                        <th>سن</th>
+                                                        <th>تاریخ شروع</th>
+                                                        <th>حقوق</th>
+                                                    </tr>
+                                                </thead>
+                                            
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>قائم امیدی</td>
+                                                        <td>معماری سیستم</td>
+                                                        <td>تهران</td>
+                                                        <td>61</td>
+                                                        <td>2011/04/25</td>
+                                                        <td>320,800 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>نسیم صابری</td>
+                                                        <td>حسابدار</td>
+                                                        <td>توکیو</td>
+                                                        <td>63</td>
+                                                        <td>2011/07/25</td>
+                                                        <td>170,750 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>فاضله غیوری</td>
+                                                        <td>تولید محتوای فنی</td>
+                                                        <td>سان فرانسیسکو</td>
+                                                        <td>66</td>
+                                                        <td>2009/01/12</td>
+                                                        <td>86,000 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>متین رضاخانی</td>
+                                                        <td>توسعه دهنده جاوا اسکریپت</td>
+                                                        <td>تهران</td>
+                                                        <td>22</td>
+                                                        <td>2012/03/29</td>
+                                                        <td>433,060 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>باران کوثری</td>
+                                                        <td>حسابدار</td>
+                                                        <td>توکیو</td>
+                                                        <td>33</td>
+                                                        <td>2008/11/28</td>
+                                                        <td>162,700 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>فرهاد مجیدی</td>
+                                                        <td>متخصص یکپارچه سازی</td>
+                                                        <td>نیویورک</td>
+                                                        <td>61</td>
+                                                        <td>2012/12/02</td>
+                                                        <td>372,000 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>فرشید اسماعیلی</td>
+                                                        <td>دستیار فروش</td>
+                                                        <td>سان فرانسیسکو</td>
+                                                        <td>59</td>
+                                                        <td>2012/08/06</td>
+                                                        <td>137,500 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>مهدی طارمی</td>
+                                                        <td>متخصص یکپارچه سازی</td>
+                                                        <td>توکیو</td>
+                                                        <td>55</td>
+                                                        <td>2010/10/14</td>
+                                                        <td>327,900 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>علی علی پور</td>
+                                                        <td>توسعه دهنده جاوا اسکریپت</td>
+                                                        <td>سان فرانسیسکو</td>
+                                                        <td>39</td>
+                                                        <td>2009/09/15</td>
+                                                        <td>205,500 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>مهدی رحمتی</td>
+                                                        <td>مهدس نرم افزار</td>
+                                                        <td>تهران</td>
+                                                        <td>23</td>
+                                                        <td>2008/12/13</td>
+                                                        <td>103,600 دلار</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> <!-- end .table-responsive-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card -->
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="mt-0 header-title">ویرایش درون خط با دکمه</h4>
+                                        <p class="sub-header">ویرایش درون خط با استفاده از یک دکمه و بدون فوکوس روی اولین ورودی</p>
+                                        <div class="table-responsive">
+                                            <table class="table table-centered mb-0" id="btn-editable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>نام</th>
+                                                        <th>موقعیت</th>
+                                                        <th>دفتر</th>
+                                                        <th>سن</th>
+                                                        <th>تاریخ شروع</th>
+                                                        <th>حقوق</th>
+                                                    </tr>
+                                                </thead>
+                                            
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>قائم امیدی</td>
+                                                        <td>معماری سیستم</td>
+                                                        <td>تهران</td>
+                                                        <td>61</td>
+                                                        <td>2011/04/25</td>
+                                                        <td>320,800 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>نسیم صابری</td>
+                                                        <td>حسابدار</td>
+                                                        <td>توکیو</td>
+                                                        <td>63</td>
+                                                        <td>2011/07/25</td>
+                                                        <td>170,750 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>فاضله غیوری</td>
+                                                        <td>تولید محتوای فنی</td>
+                                                        <td>سان فرانسیسکو</td>
+                                                        <td>66</td>
+                                                        <td>2009/01/12</td>
+                                                        <td>86,000 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>متین رضاخانی</td>
+                                                        <td>توسعه دهنده جاوا اسکریپت</td>
+                                                        <td>تهران</td>
+                                                        <td>22</td>
+                                                        <td>2012/03/29</td>
+                                                        <td>433,060 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>باران کوثری</td>
+                                                        <td>حسابدار</td>
+                                                        <td>توکیو</td>
+                                                        <td>33</td>
+                                                        <td>2008/11/28</td>
+                                                        <td>162,700 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>فرهاد مجیدی</td>
+                                                        <td>متخصص یکپارچه سازی</td>
+                                                        <td>نیویورک</td>
+                                                        <td>61</td>
+                                                        <td>2012/12/02</td>
+                                                        <td>372,000 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>فرشید اسماعیلی</td>
+                                                        <td>دستیار فروش</td>
+                                                        <td>سان فرانسیسکو</td>
+                                                        <td>59</td>
+                                                        <td>2012/08/06</td>
+                                                        <td>137,500 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>مهدی طارمی</td>
+                                                        <td>متخصص یکپارچه سازی</td>
+                                                        <td>توکیو</td>
+                                                        <td>55</td>
+                                                        <td>2010/10/14</td>
+                                                        <td>327,900 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>علی علی پور</td>
+                                                        <td>توسعه دهنده جاوا اسکریپت</td>
+                                                        <td>سان فرانسیسکو</td>
+                                                        <td>39</td>
+                                                        <td>2009/09/15</td>
+                                                        <td>205,500 دلار</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>مهدی رحمتی</td>
+                                                        <td>مهدس نرم افزار</td>
+                                                        <td>تهران</td>
+                                                        <td>23</td>
+                                                        <td>2008/12/13</td>
+                                                        <td>103,600 دلار</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> <!-- end .table-responsive-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card -->
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                        
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- Table Editable plugin-->
+        <script src="assets/libs/jquery-tabledit/jquery.tabledit.min.js"></script>
+
+        <!-- Table editable init-->
+        <script src="assets/js/pages/tabledit.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>

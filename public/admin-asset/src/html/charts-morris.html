@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ادمین تو - قالب مدیریتی واکنش گرا</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="یک قالب مدیریتی با امکانات فراوان برای ساخت سی آر ام، سیستم مدیریت محتوا و ..." name="description" />
+        <meta content="قائم امیدی" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!--Morris Chart-->
+        <link rel="stylesheet" href="assets/libs/morris-js/morris.css" />
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html', {"title": "Morris Charts"})
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">گزینه دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">لینک جدا</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title mt-0 mb-3">نمودار خطی</h4>
+
+                                    <div class="text-center">
+                                        <ul class="list-inline chart-detail-list">
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #ff8acc;"><i class="fa fa-circle mr-1"></i>سری آ</h5>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #5b69bc;"><i class="fa fa-circle mr-1"></i>سری ب</h5>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="morris-line-example" class="morris-chart" style="height: 300px;" dir="ltr"></div>
+
+                                </div>
+                            </div><!-- end col-->
+
+                            <div class="col-xl-6">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">گزینه دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">لینک جدا</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title mt-0 mb-3">نمودار میله ای</h4>
+
+                                    <div class="text-center">
+                                        <ul class="list-inline chart-detail-list">
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #ff8acc;"><i class="fa fa-circle mr-1"></i>سری آ</h5>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #5b69bc;"><i class="fa fa-circle mr-1"></i>سری ب</h5>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #35b8e0;"><i class="fa fa-circle mr-1"></i>سری ث</h5>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="morris-bar-example" class="morris-chart" style="height: 300px;" dir="ltr"></></div>
+                                </div>
+                            </div><!-- end col-->
+
+                        </div>
+                        <!-- end row -->
+
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">گزینه دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">لینک جدا</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title mt-0 mb-3">نمودار میله ای پشته ای</h4>
+
+                                    <div class="text-center">
+                                        <ul class="list-inline chart-detail-list">
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #71b6f9;"><i class="fa fa-circle mr-1"></i>سری آ</h5>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <h5><i class="fa fa-circle mr-1" style="color: #ebeff2;"></i>سری ب</h5>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="morris-bar-stacked" class="morris-chart" style="height: 300px;" dir="ltr"></></div>
+
+                                </div>
+                            </div><!-- end col-->
+
+                            <div class="col-xl-6">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">گزینه دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">لینک جدا</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title mt-0 mb-3">نمودار مساحت</h4>
+
+                                    <div class="text-center">
+                                        <ul class="list-inline chart-detail-list">
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #5b69bc;"><i class="fa fa-circle mr-1"></i>سری آ</h5>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #35b8e0;"><i class="fa fa-circle mr-1"></i>سری ب</h5>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="morris-area-example" class="morris-chart" style="height: 300px;" dir="ltr"></></div>
+
+                                </div>
+                            </div><!-- end col-->
+
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">گزینه دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">لینک جدا</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title mt-0 mb-3">نمودار مساحت با نقطه</h4>
+
+                                    <div class="text-center">
+                                        <ul class="list-inline chart-detail-list">
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #5b69bc;"><i class="fa fa-circle mr-1"></i>سری آ</h5>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #35b8e0;"><i class="fa fa-circle mr-1"></i>سری ب</h5>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="morris-area-with-dotted" class="morris-chart" style="height: 300px;" dir="ltr"></></div>
+
+                                </div>
+                            </div><!-- end col-->
+
+                            <div class="col-xl-6">
+                                <div class="card-box">
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">گزینه دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">لینک جدا</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title mt-0 mb-3"> نمودار دونات</h4>
+
+                                    <div id="morris-donut-example" class="morris-chart" style="height: 300px;" dir="ltr"></></div>
+
+                                    <div class="text-center">
+                                        <ul class="list-inline chart-detail-list">
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #5b69bc;"><i class="fa fa-circle mr-1"></i>فروش حضوری</h5>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #35b8e0;"><i class="fa fa-circle mr-1"></i>فروش ایمیلی</h5>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <h5 style="color: #ff8acc;"><i class="fa fa-circle mr-1"></i>فروش دانلودی</h5>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div><!-- end col-->
+                        </div>
+                        <!-- end row -->
+                        
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!--Morris Chart-->
+        <script src="assets/libs/morris-js/morris.min.js"></script>
+        <script src="assets/libs/raphael/raphael.min.js"></script>
+
+        <!-- Init js -->
+        <script src="assets/js/pages/morris.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ادمین تو - قالب مدیریتی واکنش گرا</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="یک قالب مدیریتی با امکانات فراوان برای ساخت سی آر ام، سیستم مدیریت محتوا و ..." name="description" />
+        <meta content="قائم امیدی" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- summernote css -->
+        <link href="assets/libs/summernote/summernote-bs4.css" rel="stylesheet" />
+
+        <!-- Custom box css -->
+        <link href="assets/libs/custombox/custombox.min.css" rel="stylesheet">
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html', {"title": "Inbox"})
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <div class="row">
+
+                            <div class="col-sm-12">
+                                <div class="inbox-app-main">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <aside id="sidebar" class="nano">
+                                                <div class="nano-content">
+
+                                                    <div class="text-center">
+                                                        <a href="#custom-modal" class="btn btn-danger btn-rounded width-lg waves-effect waves-light mb-2 mt-3" data-animation="fadein" data-plugin="custommodal" data-overlayColor="#36404a">ایمیل جدید</a>
+                                                    </div>
+                                                    <menu class="menu-segment">
+                                                        <ul class="list-unstyled">
+                                                            <li class="active"><a href="javascript:void(0);">صندوق ورودی<span> (43)</span></a>
+                                                            </li>
+                                                            <li><a href="javascript:void(0);">مهم</a></li>
+                                                            <li><a href="javascript:void(0);">ارسال شده</a></li>
+                                                            <li><a href="javascript:void(0);">پیش نویس</a></li>
+                                                            <li><a href="javascript:void(0);">زباله دان</a></li>
+                                                        </ul>
+                                                    </menu>
+                                                    <div class="separator"></div>
+                                                    <div class="menu-segment">
+                                                        <ul class="labels list-unstyled">
+                                                            <li class="title"> برچسب ها <span class="icon"> + </span></li>
+                                                            <li><a href="#">دریبل <span class="ball pink"></span></a>
+                                                            </li>
+                                                            <li><a href="#">هم اتاقی ها <span
+                                                                    class="ball green"></span></a></li>
+                                                            <li><a href="#">صورتحساب ها <span class="ball blue"></span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="separator"></div>
+                                                    <div class="menu-segment">
+                                                        <ul class="chat list-unstyled">
+                                                            <li class="title"> گفت و گو <span class="icon"> + </span></li>
+                                                            <li><a href="#"><span class="ball green"></span>جف بزوس</a>
+                                                            </li>
+                                                            <li><a href="#"><span class="ball green"></span>اروند طباطبایی</a>
+                                                            </li>
+                                                            <li><a href="#"><span class="ball blue"></span>سعید محمدی</a>
+                                                            </li>
+                                                            <li><a href="#"><span class="ball blue"></span>جادی</a>
+                                                            </li>
+                                                            <li><a href="#"><span class="ball blue"></span>جف بزوس</a></li>
+                                                            <li><a href="#" class="italic-link">مشاهده لیست آفلاین ها</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="bottom-padding"></div>
+                                                </div>
+                                            </aside>
+                                        </div> <!-- end col -->
+
+                                        <div class="col-md-9">
+                                            <main id="main">
+                                                <div class="overlay"></div>
+                                                <header class="header">
+
+                                                    <h1 class="page-title"><a class="sidebar-toggle-btn trigger-toggle-sidebar"><span
+                                                            class="line"></span><span class="line"></span><span
+                                                            class="line"></span><span class="line line-angle1"></span><span
+                                                            class="line line-angle2"></span></a></h1>
+                                                    <div class="action-bar float-left">
+                                                        <ul class="list-inline mb-0">
+                                                            <li class="list-inline-item">
+                                                                <a class="icon circle-icon"><i class="mdi mdi-refresh text-muted"></i></a>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <a class="icon circle-icon"><i class="mdi mdi-share text-muted"></i></a>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <a class="icon circle-icon red"><i class="mdi mdi-close text-danger"></i></a>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <a class="icon circle-icon red"><i class="mdi mdi-flag text-danger"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="search-box float-right">
+                                                        <input placeholder="جست و جو..."><span
+                                                            class="icon fa fa-search"></span>
+                                                    </div>
+
+                                                    <div class="clearfix"></div>
+
+                                                </header>
+
+                                                <div id="main-nano-wrapper" class="nano">
+                                                    <div class="nano-content">
+                                                        <ul class="message-list">
+                                                            <li class="unread">
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk1">
+                                                                        <label for="chk1" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">مرتضی گرانسایه (از توییتر)</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 19 &nbsp;&ndash;&nbsp;
+                                                                        <span class="teaser">خلاصه ایمیل 19</span>
+                                                                    </div>
+                                                                    <div class="date">11:49 صبح</div>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk3">
+                                                                        <label for="chk3" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">متین، من (5)</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 18 &nbsp;&ndash;&nbsp; 
+                                                                        <span class="teaser">خلاصه ایمیل 18</span>
+                                                                    </div>
+                                                                    <div class="date">5:01 صبح</div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="blue-dot">
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk4">
+                                                                        <label for="chk4" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">گوگل</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 17 &nbsp;&ndash;&nbsp; <span class="teaser">خلاصه ایمیل 17</span>
+                                                                    </div>
+                                                                    <div class="date">8 اسفند</div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="unread">
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk5">
+                                                                        <label for="chk5" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">مهدی ملایی</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 16 &nbsp;&ndash;&nbsp; 
+                                                                        <span class="teaser">خلاصه ایمیل 16</span>
+                                                                    </div>
+                                                                    <div class="date">8 اسفند</div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk6">
+                                                                        <label for="chk6" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">فیسبوک</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 15 &nbsp;&ndash;&nbsp; 
+                                                                        <span class="teaser">خلاصه ایمیل 15</span>
+                                                                    </div>
+                                                                    <div class="date">7 اسفند</div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk7">
+                                                                        <label for="chk7" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">من، سعید (2)</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 14 &nbsp;&ndash;&nbsp; 
+                                                                        <span class="teaser">خلاصه ایمیل 14</span>
+                                                                    </div>
+                                                                    <div class="date">4 اسفند</div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="orange-dot">
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk8">
+                                                                        <label for="chk8" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">مدیوم</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 13 &nbsp;&ndash;&nbsp; 
+                                                                        <span class="teaser">خلاصه ایمیل 13</span>
+                                                                    </div>
+                                                                    <div class="date">28 بهمن</div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="blue-dot">
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk9">
+                                                                        <label for="chk9" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">دانشجوکیت</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 12 &nbsp;&ndash;&nbsp; 
+                                                                        <span class="teaser">خلاصه ایمیل 12</span>
+                                                                    </div>
+                                                                    <div class="date">28 بهمن</div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk10">
+                                                                        <label for="chk10" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">دیجی کالا</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 11 &nbsp;&ndash;&nbsp; 
+                                                                        <span class="teaser">خلاصه ایمیل 11</span>
+                                                                    </div>
+                                                                    <div class="date">27 بهمن</div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk11">
+                                                                        <label for="chk11" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">راستچین</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 10 &nbsp;&ndash;&nbsp; 
+                                                                        <span class="teaser">خلاصه ایمیل 10</span>
+                                                                    </div>
+                                                                    <div class="date">24 بهمن</div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk12">
+                                                                        <label for="chk12" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">همیار وردپرس</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 9 &nbsp;&ndash;&nbsp; <span class="teaser">خلاصه ایمیل 9</span>
+                                                                    </div>
+                                                                    <div class="date">24 بهمن</div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="blue-dot">
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk13">
+                                                                        <label for="chk13" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">متین رضاخانی</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 8 &nbsp;&ndash;&nbsp; 
+                                                                        <span class="teaser">خلاصه ایمیل 8</span>
+                                                                    </div>
+                                                                    <div class="date">23 بهمن</div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk14">
+                                                                        <label for="chk14" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">علی، من (7)</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 7 &nbsp;&ndash;&nbsp; <span
+                                                                            class="teaser">خلاصه ایمیل 7</span>
+                                                                    </div>
+                                                                    <div class="date">23 بهمن</div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="unread">
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk15">
+                                                                        <label for="chk15" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">مریم، من (5)</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 6 &nbsp;&ndash;&nbsp; <span
+                                                                            class="teaser">خلاصه ایمیل 6</span>
+                                                                    </div>
+                                                                    <div class="date">21 بهمن</div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="green-dot">
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk16">
+                                                                        <label for="chk16" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">استک اکسچینج</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 5 &nbsp;&ndash;&nbsp; <span class="teaser">خلاصه ایمیل 5</span>
+                                                                    </div>
+                                                                    <div class="date">21 بهمن</div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk17">
+                                                                        <label for="chk17" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">گوگل درایو</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 4 &nbsp;&ndash;&nbsp; <span class="teaser">خلاصه ایمیل 4</span>
+                                                                    </div>
+                                                                    <div class="date">20 بهمن</div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="unread">
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk18">
+                                                                        <label for="chk18" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">من، وحید (11)</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 3 &nbsp;&ndash;&nbsp; <span
+                                                                            class="teaser">خلاصه ایمیل 3</span>
+                                                                    </div>
+                                                                    <div class="date">19 بهمن</div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk19">
+                                                                        <label for="chk19" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">زهرا، من (3)</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 2 &nbsp;&ndash;&nbsp; <span
+                                                                            class="teaser">خلاصه ایمیل 2</span>
+                                                                    </div>
+                                                                    <div class="date">6 دی</div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="mail-col mail-col-1"><span class="dot"></span>
+                                                                    <div class="checkbox-wrapper-mail">
+                                                                        <input type="checkbox" id="chk20">
+                                                                        <label for="chk20" class="toggle"></label>
+                                                                    </div>
+                                                                    <p class="title">من، جان (7)</p><span
+                                                                            class="star-toggle far fa-star"></span>
+                                                                </div>
+                                                                <div class="mail-col mail-col-2">
+                                                                    <div class="subject">موضوع لورم ایپسوم 1 &nbsp;&ndash;&nbsp;
+                                                                        <span class="teaser">خلاصه ایمیل 1</span>
+                                                                    </div>
+                                                                    <div class="date">6 دی</div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <a href="#" class="load-more-link">نمایش ایمیل های بیشتر</a>
+                                                    </div>
+                                                </div>
+                                            </main>
+                                            <div id="message">
+                                                <div class="header">
+                                                    <h4 class="page-title"><a
+                                                            class="icon circle-icon mdi mdi-close text-muted trigger-message-close"></a>فرآیند <span
+                                                            class="grey">(6)</span></h4>
+                                                    <p>از <a href="#">شما</a> به <a href="#">گوگل</a> - شروع شده در <a
+                                                            href="#">2 اسفند 1398</a> ساعت 2:14 بعد از ظهر</p>
+                                                </div>
+                                                <div id="message-nano-wrapper" class="nano">
+                                                    <div class="nano-content">
+                                                        <ul class="message-container list-unstyled">
+                                                            <li class="sent">
+                                                                <div class="details">
+                                                                    <div class="left">شما
+                                                                        <div class="arrow"></div>گوگل
+                                                                    </div>
+                                                                    <div class="right">6 اسفند 1398 - 08:08 بعد از ظهر</div>
+                                                                </div>
+                                                                <div class="message">
+                                                                    <p>| لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                                                                    <p>| لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                                                                    <p>| لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                                                                </div>
+                                                                <div class="tool-box"><a href="#"
+                                                                                         class="circle-icon small mdi mdi-share"></a><a
+                                                                        href="#"
+                                                                        class="circle-icon small red-hover mdi mdi-close"></a><a
+                                                                        href="#"
+                                                                        class="circle-icon small red-hover mdi mdi-flag"></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="received">
+                                                                <div class="details">
+                                                                    <div class="left">گوگل
+                                                                        <div class="arrow orange"></div>شما
+                                                                    </div>
+                                                                    <div class="right">6 اسفند 1398 - 08:08 بعد از ظهر</div>
+                                                                </div>
+                                                                <div class="message">
+                                                                    <p>| لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                                                                    <p>| لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                                                                    <p>| لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                                                                </div>
+                                                                <div class="tool-box"><a href="#"
+                                                                                         class="circle-icon small mdi mdi-share"></a><a
+                                                                        href="#"
+                                                                        class="circle-icon small red-hover mdi mdi-close"></a><a
+                                                                        href="#"
+                                                                        class="circle-icon small red-hover mdi mdi-flag"></a>
+                                                                </div>
+                                                            </li>
+
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end col -->
+                                    </div><!-- end row -->
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- End row -->
+
+                        
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+                <!-- @@include('./partials/footer.html') -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Modal -->
+        <div id="custom-modal" class="modal-demo text-left">
+            <button type="button" class="close" onclick="Custombox.modal.close();">
+                <span>&times;</span><span class="sr-only">بستن</span>
+            </button>
+            <h5 class="custom-modal-title">ایمیل جدید</h5>
+            <div class="card-box mb-0">
+                <form role="form">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="به">
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="رونوشت">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="رونوشت پنهان">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="موضوع">
+                    </div>
+                    <div class="form-group">
+                        <div class="summernote">
+                            <h6>سلام</h6>
+                            <ul>
+                                <li>
+                                    برای مشاهده نوار ابزار متنی را انتخاب کنید.
+                                </li>
+                                <li>
+                                    لورم ایپسوم متنی ساختگی است.
+                                </li>
+                            </ul>
+                            <p>
+                                پایان
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="btn-toolbar form-group mb-0">
+                        <div class="float-right">
+                            <button type="button" class="btn btn-success waves-effect waves-light mr-1"><i
+                                    class="far fa-save"></i></button>
+                            <button type="button" class="btn btn-success waves-effect waves-light mr-1"><i
+                                    class="far fa-trash-alt"></i></button>
+                            <button class="btn btn-purple waves-effect waves-light"><span>ارسال</span> <i
+                                    class="fas fa-paper-plane ml-1"></i></button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+        @@include('./partials/right-sidebar.html')
+        
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!--summernote init-->
+        <script src="assets/libs/summernote/summernote-bs4.min.js"></script>
+
+        <!-- Modal-Effect -->
+        <script src="assets/libs/custombox/custombox.min.js"></script>
+
+
+        <script src="assets/js/pages/inbox.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+
+        
+    </body>
+</html>

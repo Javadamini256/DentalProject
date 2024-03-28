@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ادمین تو - قالب مدیریتی واکنش گرا</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="یک قالب مدیریتی با امکانات فراوان برای ساخت سی آر ام، سیستم مدیریت محتوا و ..." name="description" />
+        <meta content="قائم امیدی" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html', {"title": "Invoice"})
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card-box">
+                                    <!-- <div class="panel-heading">
+                                        <h4>صورتحساب</h4>
+                                    </div> -->
+                                    <div class="panel-body">
+                                        <div class="clearfix">
+                                            <div class="float-left">
+                                                <h3>ادمین تو</h3>
+                                            </div>
+                                            <div class="float-right">
+                                                <h4>صورتحساب <br>
+                                                    <br/><strong>1398-12-23654789</strong>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="float-left mt-3">
+                                                    <address>
+                                                        <strong>توییتر</strong><br>
+                                                        تهران :/<br>
+                                                        برج میلاد :/<br>
+                                                        <abbr title="تلفن">شماره تماس:</abbr> 09380000000
+                                                    </address>
+                                                </div>
+                                                <div class="float-right mt-3">
+                                                    <p><strong>تاریخ سفارش: </strong> 17 اسفند 1398</p>
+                                                    <p class="m-t-10"><strong>وضعیت سفارش: </strong> <span class="label label-pink">در انتظار</span></p>
+                                                    <p class="m-t-10"><strong>شناسه سفارش: </strong> #123456</p>
+                                                </div>
+                                            </div><!-- end col -->
+                                        </div>
+                                        <!-- end row -->
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="table-responsive">
+                                                    <table class="table mt-4">
+                                                        <thead>
+                                                        <tr><th>#</th>
+                                                            <th>محصول</th>
+                                                            <th>توضیحات</th>
+                                                            <th>تعداد</th>
+                                                            <th>قیمت واحد</th>
+                                                            <th>مجموع</th>
+                                                        </tr></thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>ال سی دی</td>
+                                                            <td>لورم ایپسوم متنی ساختگی است.</td>
+                                                            <td>1</td>
+                                                            <td>380000 تومان</td>
+                                                            <td>380000 تومان</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>موبایل</td>
+                                                            <td>لورم ایپسوم متنی ساختگی است.</td>
+                                                            <td>5</td>
+                                                            <td>50000 تومان</td>
+                                                            <td>250000 تومان</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>ال ای دی</td>
+                                                            <td>لورم ایپسوم متنی ساختگی است.</td>
+                                                            <td>2</td>
+                                                            <td>500000 تومان</td>
+                                                            <td>1000000 تومان</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>ال سی دی</td>
+                                                            <td>لورم ایپسوم متنی ساختگی است.</td>
+                                                            <td>3</td>
+                                                            <td>300000 تومان</td>
+                                                            <td>900000 تومان</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>موبایل</td>
+                                                            <td>لورم ایپسوم متنی ساختگی است.</td>
+                                                            <td>5</td>
+                                                            <td>80000 تومان</td>
+                                                            <td>400000 تومان</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6 col-6">
+                                                <div class="clearfix mt-4">
+                                                    <h5 class="small text-dark">شرایط و ضوابط پرداخت</h5>
+
+                                                    <small>
+                                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-6 offset-xl-3">
+                                                <p class="text-right"><b>مجموع:</b> 2930.00</p>
+                                                <p class="text-right">تخفیف: 12.9%</p>
+                                                <p class="text-right">مالیات: 12.9%</p>
+                                                <hr>
+                                                <h3 class="text-right">2930 دلار</h3>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="d-print-none">
+                                            <div class="float-right">
+                                                <a href="javascript:window.print()" class="btn btn-dark waves-effect waves-light"><i class="fa fa-print"></i></a>
+                                                <a href="#" class="btn btn-primary waves-effect waves-light">پرداخت</a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- end row -->        
+                        
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>

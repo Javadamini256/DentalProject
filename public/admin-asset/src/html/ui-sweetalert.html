@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ادمین تو - قالب مدیریتی واکنش گرا</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="یک قالب مدیریتی با امکانات فراوان برای ساخت سی آر ام، سیستم مدیریت محتوا و ..." name="description" />
+        <meta content="قائم امیدی" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Sweet Alert-->
+        <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html', {"title": "Sweetalert"})
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                            <h4 class="header-title">نمونه ها</h4>
+
+                                            <p class="sub-header">
+                                                یک جایگزین زیبا، واکنش گرا و قابل شخصی سازی برای هشدارهای جاوا اسکریپت
+                                            </p>
+
+                                        <table class="table table-borderless table-centered mb-0">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th style="width:50%;">نوع هشدار</th>
+                                                    <th>نمونه</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>یک پیام ساده</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="sa-basic">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+            
+                                            <tr>
+                                                <td>یک عنوان با یک متن در زیر آن</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="sa-title">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>یک پیام موفقیت!</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="sa-success">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>یک مودال با یک محتوای طولانی در درون آن</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="sa-long-content">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>یک دیالوگ با موقعیت دلخواه</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="sa-custom-position">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>یک مودال به همراه عنوان، یک آیکون خطا، یک متن و پاورقی</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="sa-error">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>یک دیالوگ تایید به همراه یک تابع که بعد از کلیک روی دکمه تایید اجرا می شود...</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="sa-warning">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>شما می توانید تابع یا عمل دلخواه خود را با ارسال یک پارامتر برای دکمه لغو، اجرا کنید.</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="sa-params">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>یک پیام با تصویر دلخواه در سربرگ</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="sa-image">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>یک پیام با تایمر بسته شدن خودکار</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="sa-close">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>اچ تی ام ال دلخواه به همراه دکمه</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="custom-html-alert">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>یک پیام با عرض، پدینگ و پس زمینه دلخواه</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="custom-padding-width-alert">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>نمونه درخواست ای جکس</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="ajax-alert">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>نمونه مودال های پشت سر هم</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="chaining-alert">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>نمونه صف داینامیک</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs" id="dynamic-alert">روی من کلیک کن</button>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+            
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- Sweet Alerts js -->
+        <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+        <!-- Sweet alert init js-->
+        <script src="assets/js/pages/sweet-alerts.init.js"></script>
+
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ادمین تو - قالب مدیریتی واکنش گرا</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="یک قالب مدیریتی با امکانات فراوان برای ساخت سی آر ام، سیستم مدیریت محتوا و ..." name="description" />
+        <meta content="قائم امیدی" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html', {"title": "Checkbox & Radio"})
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card-box">
+
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">گزینه دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">لینک جدا</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title mt-0">ساده</h4>
+
+                                    <p class="text-muted font-13">
+                                        از رنگ های بوت استرپ مانند <code>.checkbox-primary</code> و <code>.checkbox-info</code> و ... پشتیبانی می کند.
+                                    </p>
+
+                                    <div class="checkbox">
+                                        <input id="checkbox0" type="checkbox">
+                                        <label for="checkbox0">
+                                            پیش فرض
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                        <input id="checkbox2" type="checkbox" checked>
+                                        <label for="checkbox2">
+                                            اصلی
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-success">
+                                        <input id="checkbox3" type="checkbox">
+                                        <label for="checkbox3">
+                                            موفقیت
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-info">
+                                        <input id="checkbox4" type="checkbox">
+                                        <label for="checkbox4">
+                                            اطلاعات
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-warning">
+                                        <input id="checkbox5" type="checkbox" checked>
+                                        <label for="checkbox5">
+                                            هشدار
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-danger">
+                                        <input id="checkbox6" type="checkbox" checked>
+                                        <label for="checkbox6">
+                                            خطر
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-purple">
+                                        <input id="checkbox6a" type="checkbox">
+                                        <label for="checkbox6a">
+                                            بنفش
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox checkbox-pink">
+                                        <input id="checkbox6b" type="checkbox" checked>
+                                        <label for="checkbox6b">
+                                            صورتی
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox checkbox-dark">
+                                        <input id="checkbox6c" type="checkbox">
+                                        <label for="checkbox6c">
+                                            تیره
+                                        </label>
+                                    </div>
+
+
+                                    <p class="text-muted font-13 mt-2">چک باکس بدون برچسب <code>.checkbox-single</code></p>
+                                    <div class="checkbox checkbox-single">
+                                        <input type="checkbox" id="singleCheckbox1" value="option1" aria-label="چک باکس تنها 1">
+                                        <label></label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary checkbox-single">
+                                        <input type="checkbox" id="singleCheckbox2" value="option2" checked aria-label="چک باکس تنها 2">
+                                        <label></label>
+                                    </div>
+
+
+                                    <p class="text-muted font-13 mt-2">چک باکس های درون خط</p>
+                                    <div class="checkbox form-check-inline">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <label for="inlineCheckbox1"> درون خط 1 </label>
+                                    </div>
+                                    <div class="checkbox checkbox-success form-check-inline">
+                                        <input type="checkbox" id="inlineCheckbox2" value="option1" checked>
+                                        <label for="inlineCheckbox2"> درون خط 2 </label>
+                                    </div>
+                                    <div class="checkbox checkbox-pink form-check-inline">
+                                        <input type="checkbox" id="inlineCheckbox3" value="option1">
+                                        <label for="inlineCheckbox3"> درون خط 3 </label>
+                                    </div>
+                                </div>
+                            </div><!-- end col -->
+
+                            <div class="col-lg-4">
+                                <div class="card-box">
+
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">گزینه دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">لینک جدا</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title mt-0">گرد</h4>
+
+                                    <p class="text-muted font-13">
+                                        از کلاس <code>.checkbox-circle</code> برای گرد شدن چک باکس استفاده کنید.
+                                    </p>
+
+                                    <div class="checkbox checkbox-circle">
+                                        <input id="checkbox7" type="checkbox">
+                                        <label for="checkbox7">
+                                            گرد ساده
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-info checkbox-circle">
+                                        <input id="checkbox8" type="checkbox" checked>
+                                        <label for="checkbox8">
+                                            اطلاعات
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary checkbox-circle">
+                                        <input id="checkbox-9" type="checkbox">
+                                        <label for="checkbox-9">
+                                            اصلی
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-success checkbox-circle">
+                                        <input id="checkbox-10" type="checkbox" checked>
+                                        <label for="checkbox-10">
+                                            موفقیت
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-warning checkbox-circle">
+                                        <input id="checkbox-11" type="checkbox">
+                                        <label for="checkbox-11">
+                                            هشدار
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-danger checkbox-circle">
+                                        <input id="checkbox-12" type="checkbox" checked>
+                                        <label for="checkbox-12">
+                                            خطر
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox checkbox-purple checkbox-circle">
+                                        <input id="checkbox-13" type="checkbox" checked>
+                                        <label for="checkbox-13">
+                                            بنفش
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                        <input id="checkbox-14" type="checkbox">
+                                        <label for="checkbox-14">
+                                            صورتی
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox checkbox-dark checkbox-circle">
+                                        <input id="checkbox-15" type="checkbox" checked>
+                                        <label for="checkbox-15">
+                                            تیره
+                                        </label>
+                                    </div>
+
+
+                                    <p class="text-muted font-13 mt-2">چک باکس بدون برچسب <code>.checkbox-single</code></p>
+                                    <div class="checkbox checkbox-single checkbox-circle">
+                                        <input type="checkbox" id="singleCheckbox11" value="option1" aria-label="چک باکس تنها 1">
+                                        <label></label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary checkbox-single checkbox-circle">
+                                        <input type="checkbox" id="singleCheckbox21" value="option2" checked aria-label="چک باکس تنها 2">
+                                        <label></label>
+                                    </div>
+
+
+                                    <p class="text-muted font-13 mt-2">چک باکس های درون خط</p>
+                                    <div class="checkbox form-check-inline checkbox-circle">
+                                        <input type="checkbox" id="inlineCheckbox11" value="option1">
+                                        <label for="inlineCheckbox11"> درون خط 1 </label>
+                                    </div>
+                                    <div class="checkbox checkbox-success form-check-inline checkbox-circle">
+                                        <input type="checkbox" id="inlineCheckbox21" value="option1" checked>
+                                        <label for="inlineCheckbox21"> درون خط 2 </label>
+                                    </div>
+                                    <div class="checkbox checkbox-pink form-check-inline checkbox-circle">
+                                        <input type="checkbox" id="inlineCheckbox31" value="option1">
+                                        <label for="inlineCheckbox31"> درون خط 3 </label>
+                                    </div>
+
+                                </div>
+                            </div><!-- end col -->
+
+                            <div class="col-lg-4">
+                                <div class="card-box">
+
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">گزینه دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">لینک جدا</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title mt-0">غیر فعال</h4>
+
+                                    <p class="text-muted font-13">
+                                        حالت غیر فعال نیز پشتیبانی می شود.
+                                    </p>
+
+                                    <div class="checkbox">
+                                        <input id="checkbox9" type="checkbox" disabled>
+                                        <label for="checkbox9">
+                                            نمی توانید این را انتخاب کنید
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-custom">
+                                        <input id="checkbox10" type="checkbox" disabled checked>
+                                        <label for="checkbox10">
+                                            همچنین این
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-warning checkbox-circle">
+                                        <input id="checkbox110" type="checkbox" disabled checked>
+                                        <label for="checkbox110">
+                                            و این
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-info">
+                                        <input id="checkbox12" type="checkbox" disabled checked>
+                                        <label for="checkbox12">
+                                            نمی توانید این را انتخاب کنید
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-pink">
+                                        <input id="checkbox13" type="checkbox" disabled checked>
+                                        <label for="checkbox13">
+                                            همچنین این
+                                        </label>
+                                    </div>
+                                    <div class="checkbox checkbox-purple checkbox-circle">
+                                        <input id="checkbox14" type="checkbox" disabled checked>
+                                        <label for="checkbox14">
+                                            و این
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div><!-- end col -->
+
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card-box">
+
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">گزینه دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">لینک جدا</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title mt-0">ساده</h4>
+
+                                    <p class="text-muted font-13">
+                                        از رنگ ها بوت استرپ مانند <code>.radio-primary</code> و <code>.radio-danger</code> و ... پشتیبانی می کند.
+                                    </p>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="radio">
+                                                <input type="radio" name="radio" id="radio1" value="option1" checked>
+                                                <label for="radio1">
+                                                    پیش فرض
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-primary">
+                                                <input type="radio" name="radio" id="radio3" value="option3">
+                                                <label for="radio3">
+                                                    اصلی
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-success">
+                                                <input type="radio" name="radio" id="radio4" value="option4">
+                                                <label for="radio4">
+                                                    موفقیت
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-info">
+                                                <input type="radio" name="radio" id="radio5" value="option5">
+                                                <label for="radio5">
+                                                    اطلاعات
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-danger">
+                                                <input type="radio" name="radio" id="radio6" value="option6">
+                                                <label for="radio6">
+                                                    خطر
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-warning">
+                                                <input type="radio" name="radio" id="radio7" value="option7">
+                                                <label for="radio7">
+                                                    هشدار
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-purple">
+                                                <input type="radio" name="radio" id="radio8" value="option8">
+                                                <label for="radio8">
+                                                    بنفش
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-pink">
+                                                <input type="radio" name="radio" id="radio9" value="option9">
+                                                <label for="radio9">
+                                                    صورتی
+                                                </label>
+                                            </div>
+
+                                        </div><!-- end col -->
+
+                                        <div class="col-sm-6">
+                                            <div class="radio">
+                                                <input type="radio" name="radio1" id="radio11" value="option1" checked>
+                                                <label for="radio11">
+                                                    پیش فرض
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-primary">
+                                                <input type="radio" name="radio3" id="radio13" value="option3">
+                                                <label for="radio13">
+                                                    اصلی
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-success">
+                                                <input type="radio" name="radio4" id="radio14" value="option4" checked>
+                                                <label for="radio14">
+                                                    موفقیت
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-info">
+                                                <input type="radio" name="radio5" id="radio15" value="option5" checked>
+                                                <label for="radio15">
+                                                    اطلاعات
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-danger">
+                                                <input type="radio" name="radio6" id="radio16" value="option6">
+                                                <label for="radio16">
+                                                    خطر
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-warning">
+                                                <input type="radio" name="radio7" id="radio17" value="option7" checked>
+                                                <label for="radio17">
+                                                    هشدار
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-purple">
+                                                <input type="radio" name="radio8" id="radio18" value="option8">
+                                                <label for="radio18">
+                                                    بنفش
+                                                </label>
+                                            </div>
+                                            <div class="radio radio-pink">
+                                                <input type="radio" name="radio9" id="radio19" value="option9" checked>
+                                                <label for="radio19">
+                                                    صورتی
+                                                </label>
+                                            </div>
+
+                                        </div><!-- end col -->
+
+                                    </div>
+                                    <!-- end row -->
+
+
+                                    <p class="text-muted font-13 mt-2">دکمه رادیویی بدون برچسب <code>.radio-single</code></p>
+                                    <div class="radio radio-single">
+                                        <input type="radio" id="singleRadio1" value="option1.1" name="radioSingle1" aria-label="دکمه رادیویی تنها 1">
+                                        <label></label>
+                                    </div>
+                                    <div class="radio radio-success radio-single">
+                                        <input type="radio" id="singleRadio2" value="option2.1" name="radioSingle1" checked aria-label="دکمه رادیویی تنها 2">
+                                        <label></label>
+                                    </div>
+
+
+                                    <p class="text-muted font-13 mt-2">دکمه های رادیویی درون خط</p>
+                                    <div class="radio radio-info form-check-inline">
+                                        <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked>
+                                        <label for="inlineRadio1"> درون خط 1 </label>
+                                    </div>
+                                    <div class="radio form-check-inline">
+                                        <input type="radio" id="inlineRadio2" value="option2" name="radioInline" checked>
+                                        <label for="inlineRadio2"> درون خط 2 </label>
+                                    </div>
+                                </div>
+                            </div><!-- end col -->
+
+                            <div class="col-lg-4">
+                                <div class="card-box">
+
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">اقدام دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">گزینه دیگر</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">لینک جدا</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title m-t-0 m-b-30">غیر فعال</h4>
+
+                                    <p class="text-muted font-13 m-b-15">
+                                        حالت غیر فعال نیز پشتیبانی می شود.
+                                    </p>
+
+                                    <div class="radio radio-danger">
+                                        <input type="radio" name="radio31" id="radio51" value="option1" checked disabled>
+                                        <label for="radio51">
+                                            بعدی
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio41" id="radio61" value="option2" checked disabled>
+                                        <label for="radio61">
+                                            یک
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-pink">
+                                        <input type="radio" name="radio61" id="radio81" value="option4" checked disabled>
+                                        <label for="radio81">
+                                            یک
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div><!-- end col -->
+                        </div>
+                        <!-- end row -->
+                        
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>
