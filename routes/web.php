@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
 
     // PatientController
     Route::resource('patient', PatientController::class);
+    // new commit
     Route::post('/Patient/newPatient', [PatientController::class, 'newPatient'])->name('patient.newPatient');
     Route::get('/Patient/getData', [PatientController::class, 'getData'])->name('patient.getData');
     Route::post('/Patient/easyCreate', [PatientController::class, 'easyCreate'])->name('patient.easyCreate');
