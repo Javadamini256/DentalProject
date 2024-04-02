@@ -51,6 +51,10 @@
         {{-- <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" /> --}}
         <link rel="stylesheet" type="text/css" href="{{ asset('admin-asset/dist/assets/datatables/css/datatables.min.css') }}" />
 
+        {{-- Table icon css  --}}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+
         {{-- <link rel="stylesheet" href="//cdn.datatables.net/2.0.1/css/dataTables.dataTables.min.css"> --}}
         <style>
             div.dataTables_wrapper {
