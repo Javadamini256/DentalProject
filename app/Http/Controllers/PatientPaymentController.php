@@ -22,7 +22,7 @@ class PatientPaymentController extends Controller
             return datatables()->of($datas)
             ->addColumn('action', function ($datas) {
                 return
-                '<button class="btn btn-success btn-round btn-just-icon btn-sm edit-btn" id="'.$datas->id.'"> <i
+                '<button class="btn btn-success btn-round btn-just-icon btn-sm editPayment" id="'.$datas->id.'"> <i
                 class="material-icons">edit</i> </button>
 
         <button type="button" id="'.$datas->id.'"
@@ -56,7 +56,7 @@ class PatientPaymentController extends Controller
             return datatables()->of($datas)
                 ->addColumn('action', function ($datas) {
                     return
-                    '<button class="btn btn-success btn-round btn-just-icon btn-sm edit-btn" id="'.$datas->id.'" > <i class="material-icons">edit</i> </button>
+                    '<button class="btn btn-success btn-round btn-just-icon btn-sm editPayment" id="'.$datas->id.'" > <i class="material-icons">edit</i> </button>
 
                         <button type="button" id="'.$datas->id.'"
                         class="  btn btn-danger btn-round btn-just-icon btn-sm deletePayment ">

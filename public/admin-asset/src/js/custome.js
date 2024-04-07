@@ -1,4 +1,5 @@
 
+
 $(".pdpBig").persianDatepicker({
     formatDate: "YYYY-0M-0D",
     theme: 'dark',
@@ -7,6 +8,9 @@ $(".pdpBig").persianDatepicker({
     cellHeight: 38,
     fontSize: 14,
 });
+
+
+
 
 // -----------------------------------Get Data of Patient----------------------------------
 $('#customer_table').DataTable({
@@ -163,13 +167,14 @@ $(document).on('click', '.deleteIcon', function (e) {
 
 // --------------------------------------------Patien Payment Table--------------------------------------
 var id = $("#patient_id").val();
+
 $('#patientPayment_table').DataTable({
     "processing": true,
     "serverSide": true,
     "searching": false,
     "paging": false,
     "ajax": {
-        "url": "../../patientPayment/data",
+        "url": route('patientPayment.data'),
         "data": {
             "id": id
         }
@@ -286,56 +291,60 @@ $(creditForm).on('submit', function (e) {
 
 });
 
-// ----------------------------------------Delete Payment Patient ----------------------------
-// $(document).on('click', '.deletePayment', function (event) {
-//     // alert('test');
-//     event.preventDefault();
+// ----------------------------------Delete patient Payment --------------------------
+let paymentDelete = route('patientPayment.delete');
+$(document).on('click', '.deletePayment', function (event) {
+    event.preventDefault();
 
-//     var id = $(this).attr('id');
-//     console.log(id);
-//     let csrf = '{{ csrf_token() }}';
-//     Swal.fire({
-//         title: 'آیا از حذف این مبلغ مطمئن هستید؟',
-//         text: "این کار قابل بازگشت نیست",
-//         icon: 'warning',
-//         showCancelButton: true,
-//         confirmButtonColor: '#17a2b7',
-//         cancelButtonColor: '#ff4c4c',
-//         confirmButtonText: 'بله, حذف کن!'
+    var id = $(this).attr('id');
+    console.log(id);
+    let csrf = '{{ csrf_token() }}';
+    Swal.fire({
+        title: 'آیا از حذف این مبلغ مطمئن هستید؟',
+        text: "این کار قابل بازگشت نیست",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#17a2b7',
+        cancelButtonColor: '#ff4c4c',
+        confirmButtonText: 'بله, حذف کن!'
 
-//     }).then((result) => {
+    }).then((result) => {
 
-//         if (result.value) {
-//             $.ajax({
-//                 headers: {
-//                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//                 },
-//                 url: "{{ url('/patienPayment/delete') }}",
-//                 method: 'delete',
-//                 data: {
-//                     id: id,
-//                     _token: csrf
-//                 },
-//                 success: function (response) {
+        if (result.value) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: paymentDelete,
+                method: 'delete',
+                data: {
+                    id: id,
+                },
+                success: function (response) {
 
-//                     console.log(response);
-//                     $('#patientPayment_table').DataTable().ajax
-//                         .reload();
-//                     Swal.fire(
-//                         'حذف شد!',
-//                         'این ردیف با موفقیت حذف گردید.',
-//                         'success'
-//                     )
-//                     // $('#customer_table').DataTable().ajax.reload();
-//                 }
-//             });
-//         } else {
-//             result.dismiss === Swal.DismissReason.cancel &&
-//                 Swal.fire({
-//                     title: "لغو شد",
-//                     text: "مبلغ انتخاب شده حذف نگردید:)",
-//                     type: "error",
-//                 });
-//         }
-//     })
-// });
+                    console.log(response);
+                    $('#patientPayment_table').DataTable().ajax
+                        .reload();
+                    Swal.fire(
+                        'حذف شد!',
+                        'این ردیف با موفقیت حذف گردید.',
+                        'success'
+                    )
+                    $('#customer_table').DataTable().ajax.reload();
+                }
+            });
+        } else {
+            result.dismiss === Swal.DismissReason.cancel &&
+                Swal.fire({
+                    title: "لغو شد",
+                    text: "مبلغ انتخاب شده حذف نگردید:)",
+                    type: "error",
+                });
+        }
+    })
+});
+
+$(document).on('click', '.editPayment', function (event) {
+    alert('clicked');
+});
+

@@ -13,6 +13,7 @@
         "morilog/jalali": "3.*",
         "nesbot/carbon": "^2.71",
         "realrashid/sweet-alert": "^7.1",
+        "tightenco/ziggy": "^2.1",
         "yajra/laravel-datatables": "10.0",
         "yajra/laravel-datatables-oracle": "10.3.1"
     },

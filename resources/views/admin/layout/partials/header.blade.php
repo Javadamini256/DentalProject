@@ -68,4 +68,6 @@
             }
         </style>
 
+        @routes
+
     </head>

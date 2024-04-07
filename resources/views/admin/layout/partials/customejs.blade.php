@@ -39,6 +39,11 @@
         });
 
 
+        $(".edit-btn").click(function(en) {
+            alert('test');
+        })
+
+
 
 
         $(".deletePayment").click(function(e) {

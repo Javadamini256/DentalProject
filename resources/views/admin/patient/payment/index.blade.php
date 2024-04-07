@@ -63,48 +63,6 @@
                                     </tr>
                                 </thead>
                             </table>
-
-
-                            {{-- <table class="table mb-0 table-sm customtable" id="paymentTable">
-                                <thead class="payment-thead">
-                                    <tr>
-                                        <th>#</th>
-                                        <th>هزینه ها</th>
-                                        <th>پرداخت ها</th>
-                                        <th>تاریخ</th>
-                                        <th>توضیحات</th>
-                                        <th>ویرایش</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="payment-table">
-                                    @php
-                                        $num = 0;
-
-                                    @endphp
-                                    @foreach ($data as $value)
-                                        @php
-                                            $num++;
-                                        @endphp
-                                        <tr>
-                                            <td><span class="badge badge-warning text-dark">{{ $value->debit }}</span></td>
-                                            <td><span class="badge badge-success">{{ $value->credit }}</span></td>
-                                            <td>{{ $value->date }}</td>
-                                            <td>{{ $value->description }}</td>
-                                            <td>
-                                                <button type="button" rel="tooltip"
-                                                    class="btn btn-success btn-round btn-just-icon btn-sm "
-                                                    data-original-title="" title="">
-                                                    <i class="material-icons">edit</i>
-                                                </button>
-                                                <button type="button" id="{{ $value->id }}"
-                                                    class="  btn btn-danger btn-round btn-just-icon btn-sm deletePayment ">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table> --}}
                         </div>
                     </div>
                 </div>
