@@ -20,19 +20,19 @@ class PatientPaymentController extends Controller
             $datas = PatientPayment::where('patient_id', $request->id)->get();
 
             return datatables()->of($datas)
-            ->addColumn('action', function ($datas) {
-                return
-                '<button class="btn btn-success btn-round btn-just-icon btn-sm edit-btn" id="'.$datas->id.'"> <i
+                ->addColumn('action', function ($datas) {
+                    return
+                        '<button class="btn btn-success btn-round btn-just-icon btn-sm edit-btn" id="' . $datas->id . '"> <i
                 class="material-icons">edit</i> </button>
 
-        <button type="button" id="'.$datas->id.'"
+        <button type="button" id="' . $datas->id . '"
             class="  btn btn-danger btn-round btn-just-icon btn-sm deletePayment ">
             <i class="material-icons">close</i>
 
         </button>
         ';
-            })
-            ->toJson();
+                })
+                ->toJson();
         }
     }
 
@@ -56,11 +56,9 @@ class PatientPaymentController extends Controller
             return datatables()->of($datas)
                 ->addColumn('action', function ($datas) {
                     return
-                    '<button class="btn btn-success btn-round btn-just-icon btn-sm edit-btn" id="'.$datas->id.'" > <i class="material-icons">edit</i> </button>
+                        '<button class="btn btn-success btn-round btn-just-icon btn-sm editPayment-btn" id="' . $datas->id . '" > <i class="material-icons">edit</i> </button>
 
-                        <button type="button" id="'.$datas->id.'"
-                        class="  btn btn-danger btn-round btn-just-icon btn-sm deletePayment ">
-                        <i class="material-icons">close</i>
+                        <button type="button" id="' . $datas->id . '" class="  btn btn-danger btn-round btn-just-icon btn-sm deletePayment "> <i class="material-icons">close</i>
 
                 </button>
                 ';

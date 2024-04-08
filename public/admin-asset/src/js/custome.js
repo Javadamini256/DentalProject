@@ -8,6 +8,7 @@ $(".pdpBig").persianDatepicker({
     fontSize: 14,
 });
 
+
 // -----------------------------------Get Data of Patient----------------------------------
 $('#customer_table').DataTable({
     // "aLengthMenu": [
@@ -285,6 +286,10 @@ $(creditForm).on('submit', function (e) {
     }
 
 });
+
+
+
+
 
 // ----------------------------------------Delete Payment Patient ----------------------------
 // $(document).on('click', '.deletePayment', function (event) {

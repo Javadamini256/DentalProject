@@ -67,5 +67,6 @@
                 white-space: nowrap;
             }
         </style>
+        @routes
 
     </head>
