@@ -23,7 +23,8 @@
 
                         <div class="float-left mt-1" style="display: inline;">
                             <address style=" font-family: 'Iransans'; font-size: 16px; color: #176B87;">
-                                <strong style="font-family: 'Iransans'; font-size: 16px; color: #176B87;">مشخصات</strong><br>
+                                <strong
+                                    style="font-family: 'Iransans'; font-size: 16px; color: #176B87;">مشخصات</strong><br>
                                 نام :{{ $patient->name }}<br>
                                 تخلص:{{ $patient->lastName }}<br>
                                 تماس:{{ $patient->phone }}<br>
@@ -36,10 +37,13 @@
                             </p>
                             <p class="m-t-10"><strong>شناسه سفارش: </strong> #123456</p>
 
-                            <button type="button" class="btn btn-lighten-success waves-effect waves-success text-dark btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg" data-backdrop="static"
+                            <button type="button"
+                                class="btn btn-lighten-success waves-effect waves-success text-dark btn-sm"
+                                data-toggle="modal" data-target=".bs-example-modal-lg" data-backdrop="static"
                                 data-keyboard="false">دریافت مبلغ</button>
 
-                            <button type="button" class="btn btn-lighten-purple waves-effect waves-purple text-dark btn-sm" data-toggle="modal" data-target="#debitModal" data-backdrop="static"
+                            <button type="button" class="btn btn-lighten-purple waves-effect waves-purple text-dark btn-sm"
+                                data-toggle="modal" data-target="#debitModal" data-backdrop="static"
                                 data-keyboard="false">ثبت هزینه </button>
                         </div>
                     </div><!-- end col -->
@@ -92,7 +96,8 @@
                 <hr>
                 <div class="d-print-none">
                     <div class="float-right">
-                        <a href="javascript:window.print()" class="btn btn-secondary waves-effect waves-light"><i class="fa fa-print"></i></a>
+                        <a href="javascript:window.print()" class="btn btn-secondary waves-effect waves-light"><i
+                                class="fa fa-print"></i></a>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -103,7 +108,8 @@
     <!-- end row -->
 
     <!--  Modal content for the above example -->
-    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -112,13 +118,15 @@
                 </div>
                 <div class="modal-body">
                     {{-- -----------------------------FORM------------------------- --}}
-                    <form id="creditForm" data-action="{{ route('patientPayment.saveCredit') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                    <form id="creditForm" data-action="{{ route('patientPayment.saveCredit') }}" method="POST"
+                        enctype="multipart/form-data" class="form-horizontal">
                         @csrf
                         <input type="hidden" id="patient" value="{{ $patient->id }}">
                         <div class="form-group row">
                             <label class="col-sm-2  col-form-label" for="example-input-normal">مبلغ دریافتی :</label>
                             <div class="col-sm-10">
-                                <input type="number" id="credit" name="credit" class="form-control" placeholder="مبلغ دریافتی را وارد کنید">
+                                <input type="number" id="credit" name="credit" class="form-control"
+                                    placeholder="مبلغ دریافتی را وارد کنید">
 
                             </div>
                         </div>
@@ -126,7 +134,8 @@
                         <div class="form-group row">
                             <label class="col-sm-2  col-form-label" for="example-input-normal">تاریخ :</label>
                             <div class="col-sm-10">
-                                <input type="text" id="creditDate" name="date" class="form-control pdpBig" placeholder="تاریخ ثبت مبلغ">
+                                <input type="text" id="creditDate" name="date" class="form-control pdpBig"
+                                    placeholder="تاریخ ثبت مبلغ">
                             </div>
                         </div>
 
@@ -137,7 +146,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" id="creditClosemodal" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                            <button type="button" id="creditClosemodal" class="btn btn-danger"
+                                data-dismiss="modal">بستن</button>
                             <button type="submit" id="saveCredit" class="btn btn-success">ذخیره</button>
                         </div>
                     </form>
@@ -158,13 +168,15 @@
                 </div>
                 <div class="modal-body">
                     {{-- -----------------------------FORM------------------------- --}}
-                    <form id="debitForm" data-action="{{ route('patientPayment.saveDebit') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                    <form id="debitForm" data-action="{{ route('patientPayment.saveDebit') }}" method="POST"
+                        enctype="multipart/form-data" class="form-horizontal">
                         @csrf
                         <input type="hidden" id="patient" value="{{ $patient->id }}">
                         <div class="form-group row">
                             <label class="col-sm-2  col-form-label" for="example-input-normal">مبلغ هزینه :</label>
                             <div class="col-sm-10">
-                                <input type="number" id="debit" name="debit" class="form-control" placeholder="مبلغ دریافتی را وارد کنید">
+                                <input type="number" id="debit" name="debit" class="form-control"
+                                    placeholder="مبلغ دریافتی را وارد کنید">
 
                             </div>
                         </div>
@@ -172,7 +184,8 @@
                         <div class="form-group row">
                             <label class="col-sm-2  col-form-label" for="example-input-normal">تاریخ :</label>
                             <div class="col-sm-10">
-                                <input type="text" id="debitDate" name="date" class="form-control pdpBig" placeholder="تاریخ ثبت مبلغ">
+                                <input type="text" id="debitDate" name="date" class="form-control pdpBig"
+                                    placeholder="تاریخ ثبت مبلغ">
                             </div>
                         </div>
 
@@ -183,7 +196,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" id="debitClosemodal" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                            <button type="button" id="debitClosemodal" class="btn btn-danger"
+                                data-dismiss="modal">بستن</button>
                             <button type="submit" id="saveDebit" class="btn btn-success">ذخیره</button>
                         </div>
                     </form>
@@ -204,20 +218,23 @@
                 </div>
                 <div class="modal-body">
                     {{-- -----------------------------FORM------------------------- --}}
-                    <form id="debitForm" data-action="{{ route('patientPayment.showData') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                    <form id="debitForm" data-action="{{ route('patientPayment.showData') }}" method="POST"
+                        enctype="multipart/form-data" class="form-horizontal">
                         <input type="hidden" name="dataToken" id="token" value="{{ csrf_token() }}">
                         <input type="hidden" id="patientPayment">
                         <div class="form-group row">
                             <label class="col-sm-2  col-form-label" for="example-input-normal">هزینه :</label>
                             <div class="col-sm-10">
-                                <input type="number" id="editDebit" class="form-control" placeholder="مبلغ دریافتی را وارد کنید">
+                                <input type="number" id="editDebit" class="form-control"
+                                    placeholder="مبلغ دریافتی را وارد کنید">
 
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2  col-form-label" for="example-input-normal">دریافتی :</label>
                             <div class="col-sm-10">
-                                <input type="number" id="editCredit" class="form-control" placeholder="مبلغ دریافتی را وارد کنید">
+                                <input type="number" id="editCredit" class="form-control"
+                                    placeholder="مبلغ دریافتی را وارد کنید">
 
                             </div>
                         </div>
@@ -225,7 +242,8 @@
                         <div class="form-group row">
                             <label class="col-sm-2  col-form-label" for="example-input-normal">تاریخ :</label>
                             <div class="col-sm-10">
-                                <input type="text" id="editDate" class="form-control pdpBig" placeholder="تاریخ ثبت مبلغ">
+                                <input type="text" id="editDate" class="form-control pdpBig"
+                                    placeholder="تاریخ ثبت مبلغ">
                             </div>
                         </div>
 
@@ -236,7 +254,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" id="editClosemodal" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                            <button type="button" id="editClosemodal" class="btn btn-danger"
+                                data-dismiss="modal">بستن</button>
                             <button type="submit" id="saveedit" class="btn btn-success">ذخیره</button>
                         </div>
                     </form>
@@ -246,3 +265,8 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 @endsection
+<script>
+    $(".editPayment-btn").click(function (event) {
+    alert('clicked');
+})
+</script>
