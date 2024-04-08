@@ -170,7 +170,7 @@ $('#patientPayment_table').DataTable({
     "searching": false,
     "paging": false,
     "ajax": {
-        "url": "../../patientPayment/data",
+        "url": route('patientPayment.data'),
         "data": {
             "id": id
         }
@@ -315,11 +315,11 @@ $(document).on('click', '.deletePayment', function (event) {
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
-                url: "{{ url('/patienPayment/delete') }}",
+                url: route('patientPayment.delete'),
                 method: 'delete',
                 data: {
                     id: id,
-                    _token: csrf
+
                 },
                 success: function (response) {
 
