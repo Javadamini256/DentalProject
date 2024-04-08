@@ -14,27 +14,27 @@ class PatientPaymentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
-    {
-        if ($request->ajax()) {
-            $datas = PatientPayment::where('patient_id', $request->id)->get();
+    // public function index(Request $request)
+    // {
+    //     if ($request->ajax()) {
+    //         $datas = PatientPayment::where('patient_id', $request->id)->get();
 
-            return datatables()->of($datas)
-            ->addColumn('action', function ($datas) {
-                return
-                '<button class="btn btn-success btn-round btn-just-icon btn-sm editPayment" id="'.$datas->id.'"> <i
-                class="material-icons">edit</i> </button>
+    //         return datatables()->of($datas)
+    //         ->addColumn('action', function ($datas) {
+    //             return
+    //             '<button class="btn btn-success btn-round btn-just-icon btn-sm editPayment" id="'.$datas->id.'"> <i
+    //             class="material-icons">edit</i> </button>
 
-        <button type="button" id="'.$datas->id.'"
-            class="  btn btn-danger btn-round btn-just-icon btn-sm deletePayment ">
-            <i class="material-icons">close</i>
+    //     <button type="button" id="'.$datas->id.'"
+    //         class="  btn btn-danger btn-round btn-just-icon btn-sm deletePayment ">
+    //         <i class="material-icons">close</i>
 
-        </button>
-        ';
-            })
-            ->toJson();
-        }
-    }
+    //     </button>
+    //     ';
+    //         })
+    //         ->toJson();
+    //     }
+    // }
 
     public function payment(Request $request, $id)
     {
