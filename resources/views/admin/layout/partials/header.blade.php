@@ -69,6 +69,4 @@
         </style>
         @routes
 
-        @routes
-
     </head>
