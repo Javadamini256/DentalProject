@@ -55,9 +55,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('patientPayment', PatientPaymentController::class);
     Route::get('/patientPayment/{id}/payment', [PatientPaymentController::class, 'payment'])->name('patientPayment.payment');
     Route::get('/patientPayment/showData', [PatientPaymentController::class, 'showData'])->name('patientPayment.showData');
-    // Route::get('/patientPayment/credit', [PatientPaymentController::class, 'credit'])->name('patientPayment.credit');
     Route::post('/patientPayment/saveDebit', [PatientPaymentController::class, 'saveDebit'])->name('patientPayment.saveDebit');
     Route::post('/patientPayment/saveCredit', [PatientPaymentController::class, 'saveCredit'])->name('patientPayment.saveCredit');
+    Route::post('/patientPayment/showDetails', [PatientPaymentController::class, 'showDetails'])->name('patientPayment.showDetails');
 
     // RadiographyController
     Route::resource('radiography', RadiographyController::class);

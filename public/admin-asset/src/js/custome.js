@@ -344,3 +344,34 @@ $(document).on('click', '.deletePayment', function (event) {
         }
     })
 });
+
+$(document).on('click', '.editPayment', function (event) {
+    var getId = $(this).data('id');
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        url: route('patientPayment.showDetails'),
+        method: 'POST',
+        // data: new FormData(this),
+        data: {
+            id: getId,
+
+        },
+        dataType: 'JSON',
+
+        success: function (response) {
+            jQuery.noConflict();
+            $('#editPaymentModal').modal('toggle');
+        },
+        error: function (response) {
+            console.log('errrrrrrrrror');
+
+        }
+    });
+    console.log(getId);
+
+});

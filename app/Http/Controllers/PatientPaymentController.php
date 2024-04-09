@@ -56,7 +56,7 @@ class PatientPaymentController extends Controller
             return datatables()->of($datas)
                 ->addColumn('action', function ($datas) {
                     return
-                        '<button class="btn btn-success btn-round btn-just-icon btn-sm editPayment-btn" id="'.$datas->id.'" > <i class="material-icons">edit</i> </button>
+                        '<button class="btn btn-success btn-round btn-just-icon btn-sm editPayment" data-id="'.$datas->id.'" > <i class="material-icons">edit</i> </button>
 
                         <button type="button" id="'.$datas->id.'" class="  btn btn-danger btn-round btn-just-icon btn-sm deletePayment "> <i class="material-icons">close</i>
 
@@ -115,6 +115,16 @@ class PatientPaymentController extends Controller
             // $data = PatientPayment::where($where)->first();
 
             return Response()->json($getData);
+        }
+    }
+
+    public function showDetails(Request $request)
+    {
+        if ($request->ajax()) {
+            $id = $request->id;
+            $paymentDetails = PatientPayment::find($id);
+
+            return response()->json(['details' => $paymentDetails]);
         }
     }
 

@@ -33,10 +33,11 @@
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
 
+
 <script src="{{ asset('admin-asset/dist/assets/js/vendor.min.js') }}"></script>
 
 <!-- third party js -->
-<script src="{{ asset('admin-asset/dist/assets/libs/datatables/jquery.dataTables.min.js') }}"></script>
+{{-- <script src="{{ asset('admin-asset/dist/assets/libs/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('admin-asset/dist/assets/libs/datatables/dataTables.bootstrap4.js') }}"></script>
 <script src="{{ asset('admin-asset/dist/assets/libs/datatables/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset('admin-asset/dist/assets/libs/datatables/responsive.bootstrap4.min.js') }}"></script>
@@ -48,7 +49,7 @@
 <script src="{{ asset('admin-asset/dist/assets/libs/datatables/dataTables.keyTable.min.js') }}"></script>
 <script src="{{ asset('admin-asset/dist/assets/libs/datatables/dataTables.select.min.js') }}"></script>
 <script src="{{ asset('admin-asset/dist/assets/libs/pdfmake/pdfmake.min.js') }}"></script>
-<script src="{{ asset('admin-asset/dist/assets/libs/pdfmake/vfs_fonts.js') }}"></script>
+<script src="{{ asset('admin-asset/dist/assets/libs/pdfmake/vfs_fonts.js') }}"></script> --}}
 <!-- third party js ends -->
 
 <!-- Datatables init -->
