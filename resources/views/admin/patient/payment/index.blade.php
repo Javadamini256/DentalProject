@@ -195,7 +195,7 @@
 
     {{-- ----------------------------------------------------------Edit Modal Form---------------------------------------------------------------- --}}
     <!--  Modal content for the above example -->
-    <div class="modal fade editModal" id="editPaymentModal">
+    <div class="modal fade editModal" id="editPaymentModal" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -204,11 +204,13 @@
                 </div>
                 <div class="modal-body">
                     {{-- -----------------------------FORM------------------------- --}}
-                    <form id="debitForm" data-action="{{ route('patientPayment.showData') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
-                        <input type="hidden" name="dataToken" id="token" value="{{ csrf_token() }}">
-                        <input type="hidden" id="patientPayment">
+                    <form id="editPaymentForm" data-action="{{ route('patientPayment.updatePatientPayment') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                        {{-- <input type="hidden" name="dataToken" id="token" value="{{ csrf_token() }}"> --}}
+                        @csrf
                         <div class="form-group row">
                             <label class="col-sm-2  col-form-label" for="example-input-normal">هزینه :</label>
+                            <input type="hidden" id="paymentId">
+
                             <div class="col-sm-10">
                                 <input type="number" id="editDebit" class="form-control" placeholder="مبلغ دریافتی را وارد کنید">
 

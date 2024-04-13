@@ -345,9 +345,11 @@ $(document).on('click', '.deletePayment', function (event) {
     })
 });
 
+// ------------------------Edit patient Payment----------------------------
 $(document).on('click', '.editPayment', function (event) {
     var getId = $(this).data('id');
-
+    $('#editPaymentModal').find('form')[0].reset();
+    $('#editPaymentModal').find('span.error-text').text('');
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -365,6 +367,16 @@ $(document).on('click', '.editPayment', function (event) {
 
         success: function (response) {
             jQuery.noConflict();
+
+
+
+
+
+            $('#paymentId').val(response.details.id);
+            $('#editCredit').val(response.details.credit);
+            $('#editDebit').val(response.details.debit);
+            $('#editDate').val(response.details.date);
+            $('#editDescription').val(response.details.description);
             $('#editPaymentModal').modal('toggle');
         },
         error: function (response) {
@@ -375,3 +387,6 @@ $(document).on('click', '.editPayment', function (event) {
     console.log(getId);
 
 });
+
+// --------------UPDATE PATIENT PAYMENT DETAILS----------------
+

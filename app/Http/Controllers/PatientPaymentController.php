@@ -128,6 +128,10 @@ class PatientPaymentController extends Controller
         }
     }
 
+    public function updatePatientPayment(Request $request)
+    {
+    }
+
     /**
      * Show the form for creating a new resource.
      */

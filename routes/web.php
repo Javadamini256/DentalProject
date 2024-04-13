@@ -58,6 +58,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/patientPayment/saveDebit', [PatientPaymentController::class, 'saveDebit'])->name('patientPayment.saveDebit');
     Route::post('/patientPayment/saveCredit', [PatientPaymentController::class, 'saveCredit'])->name('patientPayment.saveCredit');
     Route::post('/patientPayment/showDetails', [PatientPaymentController::class, 'showDetails'])->name('patientPayment.showDetails');
+    Route::post('/patientPayment/updatePatientPayment', [PatientPaymentController::class, 'updatePatientPayment'])->name('patientPayment.updatePatientPayment');
 
     // RadiographyController
     Route::resource('radiography', RadiographyController::class);
