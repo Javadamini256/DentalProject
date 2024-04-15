@@ -1,3 +1,4 @@
+// const { data } = require("autoprefixer");
 
 $(".pdpBig").persianDatepicker({
     formatDate: "YYYY-0M-0D",
@@ -387,6 +388,3 @@ $(document).on('click', '.editPayment', function (event) {
     console.log(getId);
 
 });
-
-// --------------UPDATE PATIENT PAYMENT DETAILS----------------
-
