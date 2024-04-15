@@ -388,3 +388,23 @@ $(document).on('click', '.editPayment', function (event) {
     console.log(getId);
 
 });
+// --------------UPDATE PATIENT PAYMENT DETAILS----------------
+$('#editPaymentForm').on('submit', function (e) {
+    e.preventDefault();
+    var form = this;
+    $.ajax({
+        url: $(form).attr('action'),
+        method: $(form).attr('method'),
+        data: new FormData(form),
+        processData: false,
+        dataType: 'json',
+        contentType: false,
+        beforeSend: function () {
+
+        },
+        success: function (data) {
+
+        }
+    });
+
+});
