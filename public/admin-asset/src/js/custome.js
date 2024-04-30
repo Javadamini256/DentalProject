@@ -368,11 +368,6 @@ $(document).on('click', '.editPayment', function (event) {
 
         success: function (response) {
             jQuery.noConflict();
-
-
-
-
-
             $('#paymentId').val(response.details.id);
             $('#editCredit').val(response.details.credit);
             $('#editDebit').val(response.details.debit);
@@ -403,6 +398,15 @@ $('#editPaymentForm').on('submit', function (e) {
 
         },
         success: function (data) {
+            if (data.code == 0) {
+                $.each(data.error, function (prefix, val) {
+                    $(form).find('span.' + prefix + '_error').text(val[0]);
+                });
+            } else {
+                $('editPaymentModal').modal('hide');
+                $('editPaymentModal').find('form')[0].reset();
+                toaster.success(data.msg);
+            }
 
         }
     });
